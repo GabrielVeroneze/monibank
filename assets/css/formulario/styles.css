@@ -138,6 +138,13 @@
     display: none;
 }
 
+.formulario__captura {
+    height: 240px;
+    max-width: 320px;
+    min-width: 200px;
+    width: 100%;
+}
+
 .formulario__mensagem--sucesso,
 .formulario__camera--exibir {
     display: block;
@@ -163,6 +170,10 @@
 
     .formulario__texto-secundario {
         margin: 2em 0;
+    }
+
+    .formulario__botao {
+        padding: 1em 3em;
     }
 
     .container {
