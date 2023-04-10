@@ -14,8 +14,8 @@ function verificaCampo(campo) {
     if (campo.name == 'cpf' && campo.value.length >= 11) {
         validaCPF(campo)
     }
-    
-    if (campo.name == 'aniversario') {
+    // Verifica se o campo que perde o foco é o de 'cpf', e se o valor do campo não está vazio
+    if (campo.name == 'aniversario' && campo.value != '') {
         validaIdade(campo)
     }
 }
