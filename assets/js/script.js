@@ -1,4 +1,5 @@
 import validaCPF from "./valida-cpf.js"
+import validaIdade from "./valida-idade.js"
 
 const camposDoFormulario = document.querySelectorAll('[required]')
 
@@ -13,5 +14,8 @@ function verificaCampo(campo) {
     if (campo.name == 'cpf' && campo.value.length >= 11) {
         validaCPF(campo)
     }
-
+    
+    if (campo.name == 'aniversario') {
+        validaIdade(campo)
+    }
 }
