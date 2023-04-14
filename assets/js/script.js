@@ -48,8 +48,8 @@ const mensagens = {
 }
 
 function verificaCampo(campo) {
-    // console.log(campo.validity)
     let mensagem = ''
+    campo.setCustomValidity('')
 
     // Verifica se o campo que perde o foco é o de 'cpf', e verifica se o campo tem 11 caracteres (minimo de caracteres de um CPF)
     if (campo.name == 'cpf' && campo.value.length >= 11) {
@@ -63,9 +63,18 @@ function verificaCampo(campo) {
     tiposDeErro.forEach(erro => {
         if (campo.validity[erro]) {
             mensagem = mensagens[campo.name][erro]
-            console.log(mensagem)
         }
     })
 
-    // const mensagemDeErroSpan = document.querySelectorAll
+    exibeMensagemDeErro(campo, mensagem)
+}
+
+function exibeMensagemDeErro(campo, mensagem) {
+    const mensagemDeErroSpan = campo.parentElement.querySelector('.mensagem-erro')
+
+    if (!campo.checkValidity()) {
+        mensagemDeErroSpan.textContent = mensagem
+    } else {
+        mensagemDeErroSpan.textContent = ''
+    }
 }
