@@ -1,8 +1,9 @@
 export default function validaCPF(campo) {
     const cpf = campo.value.replace(/\.|-/g, '')
 
-    // verifica se o CPF contém números repetidos e se os dois dígitos verificadores são não são válidos
+    // Verifica se o CPF contém números repetidos ou se um dos dois dígitos verificadores são não são válidos
     if (validaNumerosRepetidos(cpf) || validaPrimeiroDigito(cpf) || validaSegundoDigito(cpf)) {
+        // Define uma mensagem de erro personalizada
         campo.setCustomValidity('Esse CPF não é valido.')
     }
 }
@@ -42,7 +43,7 @@ function validaPrimeiroDigito(cpf) {
         soma = 0
     }
 
-    // Retorna se o resto da divisão é igual o primeiro digito verificador
+    // Retorna se o resto da divisão é diferente do primeiro digito verificador
     return soma != cpf[9]
 }
 
@@ -63,6 +64,6 @@ function validaSegundoDigito(cpf) {
         soma = 0
     }
 
-    // Retorna se o resto da divisão é igual o segundo digito verificador
+    // Retorna se o resto da divisão é diferente do segundo digito verificador
     return soma != cpf[10]
 }
