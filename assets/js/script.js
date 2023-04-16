@@ -5,10 +5,14 @@ const camposDoFormulario = document.querySelectorAll('[required]')
 
 const formulario = document.querySelector('[data-formulario]')
 
+// O evento 'submit' ocorre quando o usuário clicar no botão de envio do formulário
 formulario.addEventListener('submit', (e) => {
+    // Cancela a ação padrão do evento 'submit' (recaregamento da página)
     e.preventDefault()
 
+    // Objeto que contém propriedades que correspondem aos campos do formulário, atribui os valores desses campos às propriedades do objeto 
     const listaRespostas = {
+        // A expressão 'e.target.elements['x'].value' é usada para acessar o valor do campo de entrada de um formulário
         nome: e.target.elements['nome'].value,
         email: e.target.elements['email'].value,
         rg: e.target.elements['rg'].value,
@@ -16,8 +20,10 @@ formulario.addEventListener('submit', (e) => {
         aniversario: e.target.elements['aniversario'].value,
     }
 
+    // Armazena o objeto 'listaRespostas' no armazenamento local do navegador usando o localStorage. A chave é 'cadastro' e o valor é o objeto convertido em uma string JSON
     localStorage.setItem('cadastro', JSON.stringify(listaRespostas))
-    
+
+    // Redireciona o usuário para a página que contem a segunda parte da criação de conta
     window.location.href = './abrir-conta-form-2.html'
 })
 
