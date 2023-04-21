@@ -25,7 +25,7 @@ const botaoTirarFoto = document.querySelector('[data-tirar-foto]')
 const campoMensagem = document.querySelector('[data-mensagem]')
 // // Elemento HTML <canvas> em que a fimagem será exibida
 const canvas = document.querySelector('[data-video-canvas]')
-const imagemURL = ''
+let imagemURL = ''
 
 botaoTirarFoto.addEventListener('click', function() {
 
