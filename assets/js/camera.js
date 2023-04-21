@@ -22,7 +22,7 @@ iniciarCamera.addEventListener('click', async function() {
 const botaoTirarFoto = document.querySelector('[data-tirar-foto]')
 const campoMensagem = document.querySelector('[data-mensagem]')
 const canvas = document.querySelector('[data-video-canvas]')
-const imagemUrl = ''
+const imagemURL = ''
 
 botaoTirarFoto.addEventListener('click', function() {
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height)
