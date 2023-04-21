@@ -19,14 +19,21 @@ iniciarCamera.addEventListener('click', async function() {
 })
 
 
+// Representa o botão que deve ser clicado para tirar a foto
 const botaoTirarFoto = document.querySelector('[data-tirar-foto]')
+// Elemento HTML que envolve a área onde a imagem será exibida
 const campoMensagem = document.querySelector('[data-mensagem]')
+// // Elemento HTML <canvas> em que a fimagem será exibida
 const canvas = document.querySelector('[data-video-canvas]')
 const imagemURL = ''
 
 botaoTirarFoto.addEventListener('click', function() {
+
+    // Criando uma imagem capturada do vídeo sendo exibido na tela e desenhando essa imagem em um elemento canvas
+    // O método 'getContext('2d')' é usado para obter o contexto de renderização do canvas e 'drawImage()' para desenhar a imagem do elemento video no canvas
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height)
 
+    // Converte a imagem desenhada no elemento canvas em uma string de dados codificada em base64 no formato JPEG e armazena a string 
     imagemURL = canvas.toDataURL('image/jpeg')
 
     campoCamera.style.display = 'none'
