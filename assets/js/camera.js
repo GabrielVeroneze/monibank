@@ -39,3 +39,17 @@ botaoTirarFoto.addEventListener('click', function() {
     campoCamera.style.display = 'none'
     campoMensagem.style.display = 'block'
 })
+
+
+const botaoEnviarFoto = document.querySelector('[data-enviar]')
+
+botaoEnviarFoto.addEventListener('click', () => {
+    const receberDadosExistente = localStorage.getItem('cadastro')
+    const dadosConvertidos = JSON.parse(receberDadosExistente)
+
+    dadosConvertidos.imagem = imagemURL
+    
+    localStorage.setItem('cadastro', JSON.stringify(dadosConvertidos))
+
+    window.location.href = './abrir-conta-form-3.html'
+})
