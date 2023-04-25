@@ -44,12 +44,17 @@ botaoTirarFoto.addEventListener('click', function() {
 const botaoEnviarFoto = document.querySelector('[data-enviar]')
 
 botaoEnviarFoto.addEventListener('click', () => {
+    // Recupera informações de cadastro previamente armazenadas no armazenamento local do navegador
     const receberDadosExistente = localStorage.getItem('cadastro')
+    // As informações de cadastro são convertidas de uma string JSON em um objeto JavaScript
     const dadosConvertidos = JSON.parse(receberDadosExistente)
 
+    // Adicionada ao objeto 'dadosConvertidos' a chave 'imagem' com o valor sendo a variável 'imagemURL' (que contém uma imagem em formato base64) 
     dadosConvertidos.imagem = imagemURL
     
+    // O objeto 'dadosConvertidos' é armazenado no navegador. A chave 'cadastro' é usada para armazenar os dados de cadastro atualizados
     localStorage.setItem('cadastro', JSON.stringify(dadosConvertidos))
 
+    // redireciona o usuário para a próxima página
     window.location.href = './abrir-conta-form-3.html'
 })
