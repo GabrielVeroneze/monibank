@@ -127,6 +127,8 @@
 
 .mensagem-erro {
     color: red;
+    display: block;
+    margin-top: 0.5em;
 }
 
 .campo__escrita--erro {
@@ -165,7 +167,7 @@
     }
 
     .formulario__texto {
-        margin: 0;
+        margin: 1em 0;
     }
 
     .formulario__texto-secundario {
