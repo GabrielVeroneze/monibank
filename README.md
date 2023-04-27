@@ -20,10 +20,10 @@
 ## :computer: Tecnologias e Ferramentas utilizadas
 
 - <img height="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><br>
-    - `form`
-    - `fieldset`
-    - `video`
-    - `canvas`
+    - `<form>`
+    - `<fieldset>`
+    - `<video>`
+    - `<canvas>`
     - e outros
 
 - <img height="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"><br>
@@ -48,3 +48,20 @@
     - e outros
 
 ## :open_file_folder: Acesso ao projeto
+Você pode baixar o projeto diretamente:
+[Baixar código fonte](https://github.com/GabrielVeroneze/monibank/archive/refs/heads/main.zip)
+
+Também é possível clonar o repositório usando o seguinte comando:
+```
+git clone https://github.com/GabrielVeroneze/monibank.git
+```
+
+## Demonstração Visual
+`Página inicial`
+![MoniBank](https://imgur.com/dBhLyNZ.png)
+
+`Formulário`
+![MoniBank-formulario](https://imgur.com/ctTXkBl.png)
+
+`Reconhecimento facial`
+![MoniBank-reconhecimento facial](https://imgur.com/JABGJ1N.png)
