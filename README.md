@@ -48,7 +48,7 @@
     - e outros
 
 ## :open_file_folder: Acesso ao projeto
-Você pode baixar o projeto diretamente:
+Você pode baixar o projeto diretamente:  
 [Baixar código fonte](https://github.com/GabrielVeroneze/monibank/archive/refs/heads/main.zip)
 
 Também é possível clonar o repositório usando o seguinte comando:
